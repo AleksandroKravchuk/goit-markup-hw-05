@@ -607,7 +607,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
    opacity: 0;
    transition: opacity var(--transition-time) var(--function-transition),transform var(--transition-time) var(--function-transition);
 }
-.link-card:hover.thumb-card::before {
+.link-card:hover .thumb-card::before {
    transform: translate(0, 0);
    opacity: 1;
 }
