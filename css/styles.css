@@ -561,7 +561,6 @@ background: var(--accent-color);
    background: var(--header-fone-color);
    margin-top: var(--card-set);
    margin-left: var(--card-set);
-   overflow: hidden;
 }
 
 .list-card {
@@ -593,11 +592,10 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 }
 .thumb-card {
    position: relative;
+   overflow: hidden;
 }
-.thumb-card::before {
+.product-overlay {
    position: absolute;
-   display: inline-block;
-   content: "";
    top: 0;
    left: 0;
    transform: translate(0, 100%);
@@ -607,24 +605,17 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
    opacity: 0;
    transition: opacity var(--transition-time) var(--function-transition),transform var(--transition-time) var(--function-transition);
 }
-.link-card:hover .thumb-card::before {
+.link-card:hover .product-overlay {
    transform: translate(0, 0);
    opacity: 1;
 }
 .text-window {
 position: absolute;  
 top: 0;
-transform: translate(0, 100%);
 font-size: 18px;
 line-height: 1.55;
 color: var(--header-fone-color);
 padding: 63px 24px;
-opacity: 0;
-transition: opacity var(--transition-time) var(--function-transition),transform var(--transition-time) var(--function-transition) ;
-}
-.link-card:hover .text-window {
-   opacity: 1;
-   transform: translate(0, 0);
 }
 
 /* Footer */
