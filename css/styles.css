@@ -249,11 +249,13 @@ border-radius: 2px;
    padding: 10px 32px;
    border-radius: 4px;
    text-align: center;
-   transition: color var(--transition-time) var(--function-transition);
+   transition: box-shadow var(--transition-time) var(--function-transition);
 }
 .button-main:hover,
 .button-main:focus {
-   color: violet;
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+   0px 1px 2px rgba(0, 0, 0, 0.08),
+   0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -266,16 +268,21 @@ border-radius: 2px;
    min-width: 100%;
    min-height: 100%;
    background-color: rgba(0, 0, 0, 0.2);
+   opacity: 1;
+   transition: opacity var(--transition-time) var(--function-transition);
 }
 .backdrop.is-hidden {
    opacity: 0;
    pointer-events:none;
 }
+.backdrop.is-hidden .modal {
+transform: scale(0.9) translate(-50%, -50%);
+}
 .modal {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%,-50%);
+   transform: scale(1) translate(-50%,-50%);
    width: 528px;
    height: 581px ;
    background-color: var(--header-fone-color);
@@ -283,6 +290,7 @@ border-radius: 2px;
    0px 1px 1px rgba(0, 0, 0, 0.14),
    0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 4px;
+   transition: transform var(--transition-time) var(--function-transition);
 }
 .button-close {
    position: absolute;
