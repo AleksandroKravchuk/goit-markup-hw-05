@@ -269,7 +269,7 @@ border-radius: 2px;
    min-height: 100%;
    background-color: rgba(0, 0, 0, 0.2);
    opacity: 1;
-   transition: opacity var(--transition-time) var(--function-transition);
+   transition: opacity var(--transition-time) var(--function-transition), visibility var(--transition-time) var(--function-transition);
 }
 .backdrop.is-hidden {
    visibility: hidden;
@@ -304,20 +304,25 @@ transform: scale(0.9) translate(-50%, -50%);
    background: var(--header-fone-color);
    border    : 1px solid rgba(0, 0, 0, 0.1);
    box-sizing: border-box;
-   display: inline-flex;
+   display: flex;
    justify-content: center;
    align-items: center;
    transition: background var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1);
-    background-image: url(../images/close-black.svg);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
+    /* background-image: url(../images/close-black.svg); */
+  
+}
+.symbol-close {
+   width: 18px;
+   height: 18px;
+   background-color: aqua;
+  
+   
 }
 
 .button-close:hover,
 .button-close:focus {
-background: var(--accent-color);
- background-image : url(../images/close-black.svg);
+/* background: var(--accent-color);
+ background-image : url(../images/close-black.svg); */
  background-size  : contain;
  background-repeat: no-repeat;
  background-position: center;
