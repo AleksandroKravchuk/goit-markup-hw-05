@@ -307,25 +307,12 @@ transform: scale(0.9) translate(-50%, -50%);
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: background var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1);
-    /* background-image: url(../images/close-black.svg); */
-  
-}
-.symbol-close {
-   width: 18px;
-   height: 18px;
-   background-color: aqua;
-  
-   
+   transition: fill var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close:hover,
 .button-close:focus {
-/* background: var(--accent-color);
- background-image : url(../images/close-black.svg); */
- background-size  : contain;
- background-repeat: no-repeat;
- background-position: center;
+ fill: var(--accent-color);
 }
 
 /* section-advantages */
